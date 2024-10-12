@@ -88,3 +88,79 @@ select:hover, select:focus {
     outline: none; 
 }
 
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .box {
+        padding: 10px;
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .box.expanded {
+        max-height: 250px;
+    }
+
+    .box.expanded .options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Medium devices (tablets, between 600px and 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+
+    .box {
+        padding: 15px;
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .box.expanded {
+        max-height: 280px;
+    }
+
+    select {
+        width: 100%;
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Large devices (desktops, more than 900px) */
+@media (min-width: 901px) {
+    .container {
+        width: 70%;
+    }
+
+    .box {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .box.expanded {
+        max-height: 300px;
+    }
+
+    select {
+        width: 150px;
+    }
+}
+
+
